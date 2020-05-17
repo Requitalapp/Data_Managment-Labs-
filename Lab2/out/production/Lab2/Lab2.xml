@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE orders[
+<!ELEMENT orders (order+)>
+<!ELEMENT order  (delivery+, client+, manager+,  order_date+)>
+<!ATTLIST order id CDATA #REQUIRED>
+<!ELEMENT delivery (cargo+, driver+, route+)>
+<!ELEMENT cargo (cargocost+, weight+, cargotype+)>
+        <!ELEMENT cargotype (#PCDATA)>
+        <!ELEMENT cargocost (#PCDATA)>
+        <!ELEMENT weight (#PCDATA)>
+<!ELEMENT driver (full_name+, phone_number+, vehicle+, license+)>
+<!ATTLIST driver id CDATA #REQUIRED>
+        <!ELEMENT full_name (#PCDATA)>
+        <!ELEMENT phone_number (#PCDATA)>
+        <!ELEMENT vehicle (#PCDATA)>
+        <!ELEMENT license (#PCDATA)>
+<!ELEMENT route (start_point+, end_point+, distance+)>
+        <!ELEMENT start_point (#PCDATA)>
+        <!ELEMENT end_point (#PCDATA)>
+        <!ELEMENT distance (#PCDATA)>
+<!ELEMENT client (client_full_name+, client_phone_number+, address+)>
+<!ATTLIST client id CDATA #REQUIRED>
+        <!ELEMENT client_full_name (#PCDATA)>
+        <!ELEMENT client_phone_number (#PCDATA)>
+        <!ELEMENT address (#PCDATA)>
+<!ELEMENT manager (manager_full_name+, manager_phone_number+)>
+<!ATTLIST manager id CDATA #REQUIRED>
+        <!ELEMENT manager_full_name (#PCDATA)>
+        <!ELEMENT manager_phone_number (#PCDATA)>
+<!ELEMENT order_date (#PCDATA)>
+]>
+
+<orders>
+    <order id="1">
+        <delivery>
+            <cargo>
+                   <cargocost> 50000 </cargocost>
+                    <weight> 3500 </weight>
+                    <cargotype>Поддоны</cargotype>
+            </cargo>
+            <driver id="1">
+                <full_name>Арсентьев Андрей Владимирович</full_name>
+                <phone_number>89200385789</phone_number>
+                <vehicle>Газон Next</vehicle>
+                <license>160934</license>
+            </driver>
+            <route>
+                <start_point>Нижний Новгород</start_point>
+                <end_point>Москва</end_point>
+                <distance>430</distance>
+            </route>
+        </delivery>
+        <client id="1">
+            <client_full_name>Иванов Иван Иванович</client_full_name>
+            <client_phone_number>89347631280</client_phone_number>
+            <address>Москвоская область, Москва, Алексеевская 65</address>
+        </client>
+        <manager id ="1">
+            <manager_full_name>Завидов Павел Петрович</manager_full_name>
+            <manager_phone_number>8907452875</manager_phone_number>
+        </manager>
+        <order_date>25.04.2005</order_date>
+    </order>
+
+    <order id="2">
+        <delivery>
+            <cargo>
+                <cargocost> 2000000 </cargocost>
+                <weight> 23000 </weight>
+                <cargotype>Контейнер</cargotype>
+            </cargo>
+            <driver id="2">
+                <full_name>Вахов Артем Владиславович</full_name>
+                <phone_number>89271305789</phone_number>
+                <vehicle>МАЗ-6430А9-320-020</vehicle>
+                <license>168567</license>
+            </driver>
+            <route>
+                <start_point>Санкт-Петербург</start_point>
+                <end_point>Москва</end_point>
+                <distance>710</distance>
+            </route>
+        </delivery>
+        <client id="2">
+            <client_full_name>Кахов Семен Сергеевич</client_full_name>
+            <client_phone_number>89457639746</client_phone_number>
+            <address>Москвоская область, Москва, Гагарина 89</address>
+        </client>
+        <manager id ="2">
+            <manager_full_name>Свиблов Андрей Борисович</manager_full_name>
+            <manager_phone_number>8903258035</manager_phone_number>
+        </manager>
+        <order_date>28.04.2005</order_date>
+    </order>
+
+    <order id="3">
+        <delivery>
+            <cargo>
+                <cargocost> 200000 </cargocost>
+                <weight> 9500 </weight>
+                <cargotype>Краска</cargotype>
+            </cargo>
+            <driver id="3">
+                <full_name>Петров Алексей Владимирович</full_name>
+                <phone_number>89200005789</phone_number>
+                <vehicle>КамАЗ 5460</vehicle>
+                <license>164983</license>
+            </driver>
+            <route>
+                <start_point>Нижний Новгород</start_point>
+                <end_point>Санкт-Петербург</end_point>
+                <distance>1200</distance>
+            </route>
+        </delivery>
+        <client id="3">
+            <client_full_name>Иванов Владимир Иванович</client_full_name>
+            <client_phone_number>89457631280</client_phone_number>
+            <address>Ленинградская область, Санкт-Петербург, Совнаркомовская 30</address>
+        </client>
+        <manager id ="3">
+            <manager_full_name>Комаров Сергей Михайлович</manager_full_name>
+            <manager_phone_number>8907452035</manager_phone_number>
+        </manager>
+        <order_date>28.04.2005</order_date>
+    </order>
+</orders>
